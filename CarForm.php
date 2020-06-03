@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] ,input[type=reset]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit],input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Add Car Form</h3>
+
+<div class="container">
+  <form method="POST" action="AddCar.php" enctype="multipart/form-data" >
+    <label for="cpic">Car Picture</label>
+    <input type="file" id="cpic" name="cImageFile" accept="image/*">
+    <br>
+    <br>
+
+    <label for="cname">Car Name</label>
+    <input type="text" id="cname" name="cName" placeholder="Car Name.....">
+
+    <label for="comname">Company Name</label>
+    <input type="text" id="comname" name="cCompany" placeholder="Company Name.. e.g  Honda">
+
+    <label for="cmodel">Car Model</label>
+    <input type="text" id="cmodel" name="cModel" placeholder="Enter Car Model....e.g 2018" pattern="[0-9]{4}">
+
+    <label for="cplate">Number Plate</label>
+    <input type="text" id="cplate" name="cPlate" placeholder="E.g LEX-1923" pattern="[A-Z]{3}-[0-9]{4}">
+
+    <label for="ctype">Car Type</label>
+    <select id="ctype" name="cType">
+      <option value="Luxury">Luxury</option>
+      <option value="Normal">Normal</option>
+      <option value="Reliable">Reliable</option>
+    </select>
+    
+
+    <label for="crent">Car Rent</label>
+    <input type="text" id="crent" name="cRent" placeholder=" e.g 1000">
+
+    <label for="ccolor">Car Color</label>
+    <input type="text" id="ccolor" name="cColor" placeholder="e.g Red">
+
+
+     <label for="ccondition">Car Condition</label>
+    <select id="ccondition" name="cCondition">
+      <option value="new">New</option>
+      <option value="good">Good</option>
+      <option value="bad">Bad</option>
+    </select>
+
+
+    <label for="cstatus">Car Status</label>
+    <select id="cstatus" name="cStatus">
+      <option value="Active">Active</option>
+      <option value="NonActive">Non-Active</option>
+      <option value="Late">Late</option>
+    </select>
+
+
+
+    
+
+    <input type="submit" name="submit" value="Add">
+    <input type="reset" name="Reset" value="reset">
+  </form>
+
+
+</div>
+
+</body>
+</html>
